@@ -2,10 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Definiere globale CSS-Variablen, die überall verfügbar sind */
 :root {
+  --color-background: #b0cdd9;
+  --color-text: #2d404c;
+  --color-accent: #1c64f2;
+  --color-accent-hover: #1a56db;
 }
 
+/* Stile für den Body der gesamten Anwendung */
 body {
-  background-color: aquamarine;
- 
+  @apply bg-[#B0CDD9] text-[#2D404C] font-sans;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+/* Standardausrichtung für HTML-Elemente */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* Globale Stile für Links */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* Globale Stile für Buttons */
+button {
+  @apply bg-customText text-white px-4 py-2 rounded-lg;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  @apply bg-customText2;
+}
+
+/* Maximale Breite für den Inhalt */
+.container {
+  @apply max-w-screen-lg mx-auto px-4;
+}
+
+/* Typografie für Header */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold text-[#2D404C];
+  margin-top: 0;
+}
+
+/* Absatzstile */
+p {
+  @apply mb-4 leading-relaxed;
+}
+
+/* Bilder passen sich der Breite an */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Flexbox und Layout-Utils */
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.grid-center {
+  @apply grid place-items-center;
 }
