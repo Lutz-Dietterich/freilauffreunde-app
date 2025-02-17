@@ -3,8 +3,8 @@
 
 ## 1. Projektübersicht
 
-- **Projektname:** (Geben Sie Ihrem Projekt einen Namen)
-- **Projektziel:** (Was soll die Website erreichen? Z.B. Markenbekanntheit steigern, Produkte verkaufen, Informationen bereitstellen)
+- **Projektname:** FreilaufFreunde App
+- **Projektziel:** [projektziel](projektziel.md)
 - **Zielgruppe:** (Wer sind die Hauptbesucher der Website?)
 
 ## 2. Inhalt und Funktionalität
@@ -13,7 +13,7 @@
 - **Inhalte:** (Welche Art von Inhalten wird benötigt? Z.B. Texte, Bilder, Videos, Blogartikel)
 - **Funktionen:** (Welche Funktionen soll die Website haben? Z.B. Suchfunktion, Kontaktformular, Online-Shop, Benutzerkonto)
   - [drawio](../wireframes/test.drawio)
-  - 
+  -
 
 ## 3. Design und Benutzererfahrung
 
