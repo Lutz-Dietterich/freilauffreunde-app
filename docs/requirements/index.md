@@ -5,14 +5,14 @@
 
 - **Projektname:** FreilaufFreunde App
 - **Projektziel:** [projektziel](projektziel.md)
-- **Zielgruppe:** (Wer sind die Hauptbesucher der Website?)
+- **Zielgruppe:** [zielgruppe](zielgruppe.md)
 
 ## 2. Inhalt und Funktionalität
 
-- **Seitenstruktur:** (Welche Seiten sind erforderlich? Z.B. Startseite, Über uns, Produkte, Kontakt)
+- **Seitenstruktur:** [seitenstruktur](seitenstruktur.md)
 - **Inhalte:** (Welche Art von Inhalten wird benötigt? Z.B. Texte, Bilder, Videos, Blogartikel)
 - **Funktionen:** (Welche Funktionen soll die Website haben? Z.B. Suchfunktion, Kontaktformular, Online-Shop, Benutzerkonto)
-  - [drawio](../wireframes/test.drawio)
+  - **Benutzerkonto:** (Sollen Benutzer ein Konto erstellen können?)
   -
 
 ## 3. Design und Benutzererfahrung
