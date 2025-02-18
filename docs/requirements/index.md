@@ -1,4 +1,3 @@
-
 # Anforderungen an eine Website
 
 ## 1. Projektübersicht
@@ -24,15 +23,18 @@
 ## 4. Technische Anforderungen
 
 - **Content-Management-System (CMS):** (Soll ein CMS verwendet werden? Wenn ja, welches? Z.B. WordPress, Typo3)
-- **Hosting:** (Wo soll die Website gehostet werden?)
-- **Domain:** (Welche Domain soll verwendet werden?)
-- **Sicherheit:** (Welche Sicherheitsmaßnahmen sind erforderlich? Z.B. SSL-Zertifikat)
-- **Suchmaschinenoptimierung (SEO):** (Welche Maßnahmen sind zur Suchmaschinenoptimierung geplant?)
+- **Hosting:** Im ersten Schritt wird die App auf Vercel gehostet. Spöter wird die App auf einem eigenen Server gehostet.
+- **Domain:** Das hosting wird über die Domain `freilauffreunde.de` laufen. Und ist schon bei Strato registriert.
+- **Sicherheit:** Ein SSL Zertifikat ist über Vercel schon vorhanden. Später wird ein eigenes Zertifikat benötigt und wird über NGINX konfiguriert.
+- **Suchmaschinenoptimierung (SEO):** Es wird Backlinks zu sozialen Medien geben. Die Website wird auf Google und Bing eingetragen.
+  Keywords werden in den Texten verwendet. Metatags werden auf bestimmten Seiten dynamisch generiert.
+  z.B. Für die Druckdateien werden die Metatags in der Datenbank gespeichert und bei der Generierung der Seite ausgelesen.
+-
 
 ## 5. Budget und Zeitplan
 
 - **Budget:** (Wie hoch ist das Budget für die Website?)
-- **Zeitplan:** (Wann soll die Website fertiggestellt sein?)
+- **Zeitplan:** [zeitplan](zeitplan.md)
 
 ## 6. Sonstige Anforderungen
 
