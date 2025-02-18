@@ -8,8 +8,11 @@
 
 ## 2. Inhalt und Funktionalität
 
-- **Seitenstruktur:** [seitenstruktur](seitenstruktur.md)
-- **Inhalte:** (Welche Art von Inhalten wird benötigt? Z.B. Texte, Bilder, Videos, Blogartikel)
+- **Seitenstruktur:**
+  - [startseite-struktur](./Seitenstruktur/startseite-struktur.md)
+- **Inhalte:**
+  - [startseite-seiteninhalt](./SeitenInhalte/startseite-seiteninhalt.md)
+  -
 - **Funktionen:** (Welche Funktionen soll die Website haben? Z.B. Suchfunktion, Kontaktformular, Online-Shop, Benutzerkonto)
   - **Benutzerkonto:** (Sollen Benutzer ein Konto erstellen können?)
   -
@@ -40,10 +43,10 @@
 
 ## 6. Sonstige Anforderungen
 
-- **Barrierefreiheit:** (Soll die Website barrierefrei sein?)
+- **Barrierefreiheit:** Die Barrierefreiheit soll berücksichtigt werden. Es soll eine gute Kontrastierung der Farben geben. Es soll eine alternative Textbeschreibung für Bilder geben. Die HTML-Struktur soll semantisch korrekt sein. Es soll eine Tastaturnavigation möglich sein. Es soll eine gute Lesbarkeit der Schriftgröße geben. Es soll eine gute Lesbarkeit der Schriftart geben.
 - **Sprachen:** Die Webseite soll in Deutsch verfügbar sein.
-- **Integrationen:** (Soll die Website in andere Systeme integriert werden? Z.B. CRM, Newsletter-Tool)
-- **Rechtliche Anforderungen:** (Datenschutz, Impressum, Cookie-Hinweis)
+- **Integrationen:** Es soll Youtube Videos eingebunden werden. Es soll ein Kontaktformular mit Nodemailer eingebunden werden. Es soll ein Newsletter eingebunden werden.Weiter soll eine Instagram Integration eingebunden werden. Sowie Amazon Affiliate Links.
+- **Rechtliche Anforderungen:** Es soll ein Impressum und eine Datenschutzerklärung vorhanden sein. Es soll ein Cookie-Banner eingebunden werden. Die Website soll DSGVO-konform sein. Die Datenschutzerklärung soll von mit eRecht24 erstellt werden. Die Cookie-Banner wird falls nötig selbst erstellt.
 
 ## Zusätzliche Tipps:
 
