@@ -1,7 +1,7 @@
 # FreilaufFreunde
 
 Website für Fahrradwohnwagen-Touren, Bauanleitungen und Outdoor-Inspiration mit Hund.
-Gebaut mit Next.js 14 (App Router) / TypeScript / styled-components.
+Gebaut mit Next.js 16 (App Router) / TypeScript / CSS Modules.
 
 ---
 
@@ -45,7 +45,7 @@ Bei Aufgaben die mehr als eine Datei betreffen zusätzlich:
 
 ## Tech-Stack
 
-- **Framework:** Next.js 14 (App Router)
+- **Framework:** Next.js 16 (App Router)
 - **Sprache:** TypeScript
 - **Styling:** CSS Modules (`styles.module.css`)
 - **Hosting:** Vercel (Phase 1) → eigener Server Hetzner CX32 + NGINX (Phase 2)

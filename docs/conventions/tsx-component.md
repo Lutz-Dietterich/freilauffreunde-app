@@ -1,20 +1,27 @@
-# Best Practices für TSX-Komponenten in Next.js mit styled-components
+# Best Practices für TSX-Komponenten in Next.js mit CSS Modules
 
-Diese Dokumentation legt die Konvention fest, styled-components mit dem Präfix `Styled` zu benennen.
+Diese Dokumentation legt die Konvention für alle Komponenten im Projekt fest.
 
-## Namensgebung
-- Alle styled-components werden mit `Styled` als Präfix benannt (z. B. `StyledContainer`, `StyledHeader`).
+## Pflichtstruktur
+
+Jede Komponente besteht aus **genau zwei Dateien** in einem eigenen Verzeichnis:
+
+- `index.tsx` — Komponenten-Code
+- `styles.module.css` — CSS Module Styles
+
+Styles werden **niemals** inline in `index.tsx` geschrieben.
 
 ## Struktur einer TSX-Komponente
+
 1. **Importe:**
-   Importieren von React, styled-components und ggf. weiteren Abhängigkeiten.
+   Import von React (wenn nötig), CSS Module und weiteren Abhängigkeiten.
 
-2. **Komponenten-Definition:**
-   - Definition der Komponente und ihrer Props.
-   - Nutzung der styled-components in JSX.
+2. **Interface/Props:**
+   TypeScript-Interface für die Props der Komponente.
 
-3. **Definition der styled-components:**
-   Alle styled-components werden am Ende der Datei definiert, um die Logik von den Style-Definitionen zu trennen.
+3. **Komponenten-Definition:**
+   - Definition der Komponente als `React.FC<Props>` oder als normale Funktion.
+   - CSS-Klassen werden über das `styles`-Objekt angebunden.
 
 4. **Export:**
    Export der Komponente als `export default`.
@@ -22,30 +29,47 @@ Diese Dokumentation legt die Konvention fest, styled-components mit dem Präfix 
 ## Beispielcode
 
 ```tsx
-import React from 'react';
-import styled from 'styled-components';
+import styles from './styles.module.css';
 
 interface MyComponentProps {
   title: string;
+  children?: React.ReactNode;
 }
 
 const MyComponent: React.FC<MyComponentProps> = ({ title, children }) => {
   return (
-    <StyledContainer>
-      <StyledHeader>{title}</StyledHeader>
+    <div className={styles.container}>
+      <h1 className={styles.header}>{title}</h1>
       {children}
-    </StyledContainer>
+    </div>
   );
 };
 
-const StyledContainer = styled.div`
-  padding: 1rem;
-  background-color: #fff;
-`;
+export default MyComponent;
+```
 
-const StyledHeader = styled.h1`
+```css
+/* styles.module.css */
+.container {
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+}
+
+.header {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-`;
+  color: var(--text-primary);
+}
+```
 
-export default MyComponent;
+## Theming
+
+Farben und Design-Tokens werden ausschließlich über CSS Custom Properties aus `globals.css` eingebunden — niemals hardcoded.
+
+Für theme-spezifische Overrides (Dark/Light Mode) innerhalb eines CSS Modules:
+
+```css
+:global([data-theme="light"]) .myClass {
+  color: var(--text-primary);
+}
+```
