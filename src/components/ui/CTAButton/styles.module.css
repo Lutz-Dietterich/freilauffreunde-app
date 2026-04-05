@@ -1,0 +1,64 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Primary — orange gefüllt */
+.primary {
+  background-color: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px rgba(224, 120, 64, 0.35);
+}
+
+.primary:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  box-shadow: 0 6px 20px rgba(224, 120, 64, 0.5);
+  color: #ffffff;
+}
+
+/* Outline — transparent mit Rahmen */
+.outline {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.outline:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+/* Outline auf hellem Hintergrund */
+.outlineDark {
+  background-color: transparent;
+  color: var(--text-primary);
+  border-color: var(--accent);
+}
+
+.outlineDark:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+}

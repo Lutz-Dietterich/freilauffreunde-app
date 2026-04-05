@@ -1,23 +1,64 @@
 .nav {
-  padding: 1rem;
-  font-size: 1.5rem;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 .list {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
+/* Standard: weiß — über dem Hero mit dunklem Overlay */
 .link {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.88);
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.25s ease;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  border-radius: 2px;
+  transition: width 0.3s ease;
 }
 
 .link:hover {
-  color: #e5e7eb;
+  color: #ffffff;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+/* Scrolled-Zustand im Light Mode: dunkle Schrift auf hellem Header-Hintergrund */
+:global([data-theme="light"]) .linkScrolled {
+  color: var(--text-primary);
+}
+
+:global([data-theme="light"]) .linkScrolled:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .list {
+    gap: 1.2rem;
+  }
+
+  .link {
+    font-size: 0.85rem;
+  }
 }

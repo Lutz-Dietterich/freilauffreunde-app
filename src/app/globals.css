@@ -1,19 +1,49 @@
-/* Brand-Farben aus dem Logo */
-:root {
-  --color-background: #1e2d3d;
-  --color-text: #ffffff;
-  --color-accent: #e07840;
-  --color-accent-secondary: #4d7d8a;
+/* ===== DARK MODE (Standard) ===== */
+:root,
+[data-theme="dark"] {
+  --bg-primary: #1e2d3d;
+  --bg-secondary: #162333;
+  --bg-card: #243444;
+  --bg-card-alt: #2d4156;
+  --text-primary: #ffffff;
+  --text-secondary: #8ba8be;
+  --accent: #e07840;
+  --accent-hover: #c8622e;
+  --accent-secondary: #4d7d8a;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.25);
+  --nav-bg: rgba(22, 35, 51, 0.88);
+  --overlay: rgba(22, 35, 51, 0.55);
+  --circle-border: rgba(255, 255, 255, 0.15);
 }
 
-body {
-  background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: sans-serif;
+/* ===== LIGHT MODE ===== */
+[data-theme="light"] {
+  --bg-primary: #f0f4f8;
+  --bg-secondary: #e2eaf2;
+  --bg-card: #ffffff;
+  --bg-card-alt: #f8fafc;
+  --text-primary: #1e2d3d;
+  --text-secondary: #4d6070;
+  --accent: #e07840;
+  --accent-hover: #c8622e;
+  --accent-secondary: #4d7d8a;
+  --border: rgba(0, 0, 0, 0.08);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --nav-bg: rgba(240, 244, 248, 0.88);
+  --overlay: rgba(22, 35, 51, 0.45);
+  --circle-border: rgba(30, 45, 61, 0.15);
+}
+
+/* ===== RESET & BASE ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  min-height: 100vh;
 }
 
 html {
@@ -21,50 +51,102 @@ html {
   font-size: 16px;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
 }
 
-a {
-  color: var(--color-accent);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--color-accent-secondary);
-}
-
-button {
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
+/* ===== TYPOGRAFIE ===== */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
-  color: var(--color-text);
-  margin-top: 0;
+  color: var(--text-primary);
+  line-height: 1.2;
 }
 
 p {
-  margin-bottom: 1rem;
-  line-height: 1.625;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ===== LAYOUT UTILS ===== */
 .container {
-  max-width: 1024px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-secondary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }

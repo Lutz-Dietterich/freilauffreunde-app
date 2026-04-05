@@ -1,47 +1,122 @@
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .hero {
   position: relative;
   background-image: url('/images/freilauffreundeHero.png');
   background-size: cover;
   background-position: center;
   height: 100vh;
+  min-height: 600px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dunkles Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(22, 35, 51, 0.6) 0%,
+    rgba(22, 35, 51, 0.4) 50%,
+    rgba(22, 35, 51, 0.75) 100%
+  );
 }
 
 .content {
   position: relative;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  z-index: 2;
   text-align: center;
-  color: #ffffff;
+  padding: 0 1.5rem;
+  max-width: 780px;
+}
+
+.preTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  animation: heroFadeUp 0.7s ease 0.2s both;
 }
 
 .title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.text {
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
-}
-
-.cta {
-  background-color: #2d404c;
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  font-weight: 900;
   color: #ffffff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-size: 1.125rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  line-height: 1.08;
+  margin-bottom: 1.5rem;
+  animation: heroFadeUp 0.7s ease 0.4s both;
 }
 
-.cta:hover {
-  background-color: #374151;
-  color: #ffffff;
+.titleAccent {
+  color: var(--accent);
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+  animation: heroFadeUp 0.7s ease 0.6s both;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: heroFadeUp 0.7s ease 0.8s both;
+}
+
+/* Scroll-Indikator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  animation: heroFadeIn 1s ease 1.2s both;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), transparent);
+}
+
+.scrollDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
 }

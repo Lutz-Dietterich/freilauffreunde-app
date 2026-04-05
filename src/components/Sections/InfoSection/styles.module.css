@@ -1,0 +1,160 @@
+.section {
+  padding: 6rem 0;
+  background-color: var(--bg-primary);
+}
+
+.sectionAlt {
+  background-color: var(--bg-secondary);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.innerReverse {
+  direction: rtl;
+}
+
+.innerReverse > * {
+  direction: ltr;
+}
+
+/* Text-Seite */
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.highlight {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 0.25rem;
+}
+
+.title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.text {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+/* Bild-Seite */
+.imageBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Dekorative Kreis-Outlines */
+.imageBlock::before {
+  content: '';
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  border: 2px solid var(--circle-border);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.imageBlock::after {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 2px solid var(--circle-border);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.imageCircle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--accent);
+  box-shadow: var(--shadow);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+
+.imageCircle:hover {
+  transform: scale(1.03);
+}
+
+.imageCircle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dekorativer Akzent-Kreis */
+.accentDot {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  bottom: 10px;
+  right: 30px;
+  z-index: 2;
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .inner,
+  .innerReverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 2.5rem;
+  }
+
+  .imageCircle {
+    width: 240px;
+    height: 240px;
+  }
+
+  .imageBlock::before {
+    width: 270px;
+    height: 270px;
+  }
+
+  .imageBlock::after {
+    width: 220px;
+    height: 220px;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+}
