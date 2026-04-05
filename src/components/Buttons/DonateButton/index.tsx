@@ -1,9 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
+import styles from './styles.module.css';
 
 const DonateButton: React.FC = () => {
   return (
-    <div className="flex justify-center mt-10 z-20">
+    <div className={styles.wrapper}>
       <form
         action="https://paypal.me/freilauffreunde?country.x=DE&locale.x=de_DE"
         method="post"
@@ -14,18 +15,15 @@ const DonateButton: React.FC = () => {
           name="hosted_button_id"
           value="DEINE_PAYPAL_BUTTON_ID"
         />
-        <button
-          type="submit"
-          className="flex  bg-yellow-300 text-customText text-2xl font-bold py-2 px-6 rounded-full hover:bg-yellow-500 transition duration-300"
-        >
+        <button type="submit" className={styles.button}>
           <Image
-            className="mr-5 "
+            className={styles.logo}
             src="/images/PayPalLogo.png"
             alt="PayPal Logo"
             width={137}
             height={41}
           />
-          <div className="pt-2.5">Spenden</div>
+          <span className={styles.label}>Spenden</span>
         </button>
       </form>
     </div>

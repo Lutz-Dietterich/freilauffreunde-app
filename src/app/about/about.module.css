@@ -1,0 +1,9 @@
+.wrapper {
+  background-color: var(--color-background);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 1.875rem;
+}

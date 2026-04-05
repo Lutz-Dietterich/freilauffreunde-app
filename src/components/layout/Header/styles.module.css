@@ -1,0 +1,16 @@
+.header {
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  color: #ffffff;
+}
+
+.inner {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}

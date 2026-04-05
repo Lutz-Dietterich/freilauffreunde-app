@@ -1,28 +1,32 @@
-
-/* Definiere globale CSS-Variablen, die überall verfügbar sind */
+/* Brand-Farben aus dem Logo */
 :root {
-  --color-background: #b0cdd9;
-  --color-text: #2d404c;
-  --color-accent: #1c64f2;
-  --color-accent-hover: #1a56db;
+  --color-background: #1e2d3d;
+  --color-text: #ffffff;
+  --color-accent: #e07840;
+  --color-accent-secondary: #4d7d8a;
 }
 
-/* Stile für den Body der gesamten Anwendung */
 body {
-  @apply bg-[#B0CDD9] text-[#2D404C] font-sans;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   min-height: 100vh;
 }
 
-/* Standardausrichtung für HTML-Elemente */
 html {
   scroll-behavior: smooth;
   font-size: 16px;
 }
 
-/* Globale Stile für Links */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 a {
   color: var(--color-accent);
   text-decoration: none;
@@ -30,51 +34,37 @@ a {
 }
 
 a:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-accent-secondary);
 }
 
-/* Globale Stile für Buttons */
 button {
-  @apply bg-customText text-white px-4 py-2 rounded-lg;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  @apply bg-customText2;
-}
-
-/* Maximale Breite für den Inhalt */
-.container {
-  @apply max-w-screen-lg mx-auto px-4;
-}
-
-/* Typografie für Header */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  @apply font-bold text-[#2D404C];
+  font-weight: bold;
+  color: var(--color-text);
   margin-top: 0;
 }
 
-/* Absatzstile */
 p {
-  @apply mb-4 leading-relaxed;
+  margin-bottom: 1rem;
+  line-height: 1.625;
 }
 
-/* Bilder passen sich der Breite an */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Flexbox und Layout-Utils */
-.flex-center {
-  @apply flex justify-center items-center;
-}
-
-.grid-center {
-  @apply grid place-items-center;
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }

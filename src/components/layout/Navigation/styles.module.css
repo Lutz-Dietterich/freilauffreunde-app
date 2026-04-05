@@ -1,0 +1,23 @@
+.nav {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #e5e7eb;
+}

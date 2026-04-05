@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  z-index: 20;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  background-color: #fde047;
+  color: #2d404c;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #eab308;
+}
+
+.logo {
+  margin-right: 1.25rem;
+}
+
+.label {
+  padding-top: 0.625rem;
+}

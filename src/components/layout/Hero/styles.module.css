@@ -1,0 +1,47 @@
+.hero {
+  position: relative;
+  background-image: url('/images/freilauffreundeHero.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.content {
+  position: relative;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.text {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  background-color: #2d404c;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #374151;
+  color: #ffffff;
+}

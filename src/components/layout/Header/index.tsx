@@ -1,11 +1,12 @@
 import React from 'react';
-import Navigation from './Navigation';
 import Image from 'next/image';
+import Navigation from '../Navigation';
+import styles from './styles.module.css';
 
 const Header: React.FC = () => {
   return (
-    <header className="absolute z-20 w-full top-0 left-0 p-8 text-white">
-      <div className=" mx-auto flex justify-between items-top">
+    <header className={styles.header}>
+      <div className={styles.inner}>
         <Image
           src="/images/LogoFreilauffreunde.png"
           alt="Freilauffreunde Logo"
